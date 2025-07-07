@@ -160,53 +160,12 @@ body {
   display: none;
   cursor: pointer;
   z-index: 999;
+  will-change: transform;
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: var(--glass-bg);
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-/* Portfolio Layout */
-/* Portfolio Layout */
-:root {
-  --bg-color: #1c1c1c;
-  --accent: #d4a373;
-  --text-light: #f1f1f1;
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-light);
 }
 
 /* Sobre o Artista */
@@ -298,169 +257,6 @@ body {
   color: var(--accent);
 }
 
-@media (max-width: 768px) {
-  .about-artist {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .about-photo {
-    width: 100%;
-    max-width: 100%;
-  }
-  .about-text {
-    width: 100%;
-  }
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  z-index: 1000;
-}
-
-.nav-links a {
-  margin-left: 2rem;
-  color: var(--text-light);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: var(--accent);
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: var(--text-light);
-  margin: 4px;
-  border-radius: 2px;
-}
-
-.hero {
-  height: 100vh;
-  background: url('images/bg/mystic.png') center/cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.hero-content {
-  z-index: 2;
-  text-align: center;
-  max-width: 60%;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  text-align: right;
-  margin-bottom: 2rem;
-}
-
-.cta-button {
-  padding: 0.8rem 2rem;
-  background: var(--accent);
-  color: #000;
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #e6b57e;
-  box-shadow: 0 0 10px var(--accent);
-}
-
-.footer {
-  background: #111;
-  padding: 2rem;
-  text-align: center;
-}
-
-.social-icons {
-  margin-top: 1rem;
-}
-
-.icon {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  margin: 0 10px;
-  background-size: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.icon:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px var(--accent);
-}
-
-.twitter {
-  background-image: url('images/icons/X.png');
-}
-
-.instagram {
-  background-image: url('images/icons/Instagram.png');
-}
-
-.bluesky {
-  background-image: url('images/icons/Bluesky.png');
-}
-
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 14px;
-  font-size: 1rem;
-  background: var(--accent);
-  border: none;
-  border-radius: 50%;
-  display: none;
-  cursor: pointer;
-  z-index: 999;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 /* Portfolio-specific */
 .portfolio-container {
   padding: 7rem 2rem 4rem;
@@ -506,7 +302,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   transition: transform 0.4s ease;
+  will-change: transform;
   position: relative;
+  content-visibility: auto;
 }
 
 .art-thumb .overlay {
@@ -553,18 +351,6 @@ body {
 }
 
 .lightbox-content {
-  max-width: 90%;
-  max-height: 90%;
-  background: #222;
-  padding: 1rem;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.lightbox-content {
   max-width: 90vw;
   max-height: 90vh;
   background: #222;
@@ -573,20 +359,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto; /* ADICIONADO: permite rolagem se necessário */
+  overflow: auto;
   position: relative;
+  content-visibility: auto;
 }
 
 .lightbox img {
-  width: auto;
-  height: auto;
   max-width: 100%;
-  max-height: 80vh; /* EVITA QUE PASSE DA TELA */
+  max-height: 80vh;
   object-fit: contain;
   border-radius: 6px;
   margin-bottom: 1rem;
+  will-change: opacity, transform;
 }
-
 
 .lightbox-info {
   color: #eee;
@@ -624,6 +409,17 @@ body {
   .filters {
     flex-direction: column;
     align-items: center;
+  }
+
+  .about-artist {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-photo,
+  .about-text {
+    width: 100%;
+    max-width: 100%;
   }
 
   .lightbox-content {

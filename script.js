@@ -1,19 +1,19 @@
-// Mobile menu toggle
+// ========== Mobile Menu Toggle ==========
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-if (hamburger && navLinks) {
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-}
+hamburger?.addEventListener("click", () => {
+  navLinks?.classList.toggle("active");
+});
 
-// Back to top button
+// ========== Back to Top Button ==========
 const backToTopBtn = document.getElementById("backToTop");
 
 if (backToTopBtn) {
   window.addEventListener("scroll", () => {
-    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    window.requestAnimationFrame(() => {
+      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
   });
 
   backToTopBtn.addEventListener("click", () => {
@@ -21,8 +21,7 @@ if (backToTopBtn) {
   });
 }
 
-// ==================== Portfolio Logic ====================
-
+// ========== Portfolio Logic ==========
 const gallery = document.getElementById("gallery");
 const tagFilter = document.getElementById("tagFilter");
 const dateFilter = document.getElementById("dateFilter");
@@ -36,8 +35,11 @@ const closeLightbox = document.querySelector(".lightbox .close");
 
 let artworksData = [];
 
+// ========== Render Gallery ==========
 function renderGallery(data) {
   if (!gallery) return;
+
+  const fragment = document.createDocumentFragment();
   gallery.innerHTML = "";
 
   data.forEach(art => {
@@ -52,32 +54,46 @@ function renderGallery(data) {
       </div>
     `;
     item.addEventListener("click", () => openLightbox(art));
-    gallery.appendChild(item);
+    fragment.appendChild(item);
   });
-  if (typeof Masonry === "function") new Masonry(gallery, { itemSelector: ".artwork", gutter: 5 });
+
+  gallery.appendChild(fragment);
+
+  // Inicializa Masonry se disponível
+  typeof Masonry === "function" && new Masonry(gallery, {
+    itemSelector: ".artwork",
+    gutter: 5
+  });
 }
 
+// ========== Lightbox ==========
 function openLightbox(art) {
   if (!lightbox) return;
+
   lightbox.classList.remove("hidden");
   lightboxImg.src = art.image;
+  lightboxImg.loading = "lazy";
   lightboxTitle.textContent = art.title;
   lightboxDesc.textContent = art.description;
   lightboxTags.textContent = art.tags.join(", ");
   lightboxYear.textContent = new Date(art.date).toLocaleDateString();
 }
 
-if (closeLightbox) {
-  closeLightbox.addEventListener("click", () => lightbox.classList.add("hidden"));
-  lightbox.addEventListener("click", e => {
-    if (e.target === lightbox) lightbox.classList.add("hidden");
-  });
-}
+closeLightbox?.addEventListener("click", () => {
+  lightbox?.classList.add("hidden");
+});
 
+lightbox?.addEventListener("click", (e) => {
+  if (e.target === lightbox) lightbox.classList.add("hidden");
+});
+
+// ========== Populate Tags ==========
 function populateTags(data) {
+  if (!tagFilter) return;
+
   const tagsSet = new Set();
   data.forEach(art => art.tags.forEach(tag => tagsSet.add(tag)));
-  if (!tagFilter) return;
+
   tagsSet.forEach(tag => {
     const option = document.createElement("option");
     option.value = tag;
@@ -86,24 +102,28 @@ function populateTags(data) {
   });
 }
 
+// ========== Apply Filters ==========
 function applyFilters() {
+  if (!tagFilter || !dateFilter) return;
+
   let filtered = [...artworksData];
 
-  const tag = tagFilter?.value;
-  if (tag && tag !== "all") {
+  const tag = tagFilter.value;
+  if (tag !== "all") {
     filtered = filtered.filter(art => art.tags.includes(tag));
   }
 
-  const order = dateFilter?.value;
-  if (order === "asc") {
-    filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
-  } else {
-    filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
-  }
+  const order = dateFilter.value;
+  filtered.sort((a, b) =>
+    order === "asc"
+      ? new Date(a.date) - new Date(b.date)
+      : new Date(b.date) - new Date(a.date)
+  );
 
   renderGallery(filtered);
 }
 
+// ========== Fetch JSON ==========
 function fetchArtworks() {
   fetch("artworks.json")
     .then(res => res.json())
@@ -115,6 +135,7 @@ function fetchArtworks() {
     .catch(err => console.error("Erro ao carregar artworks.json", err));
 }
 
+// ========== Inicialização ==========
 if (gallery) {
   fetchArtworks();
   tagFilter?.addEventListener("change", applyFilters);
