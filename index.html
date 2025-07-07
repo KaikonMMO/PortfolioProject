@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KaikonMMO Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+  <a href="/index.html" 
+     style="color: inherit; text-decoration: none; cursor: pointer;
+            transition: opacity 0.2s ease;"
+     onmouseover="this.style.opacity='0.9'" 
+     onmouseout="this.style.opacity='1'">
+    KaikonMMO
+  </a>
+</div>
+    <nav class="nav-links">
+      
+      <a href="/portfolio.html">Portfolio</a>
+      
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content fade-in">
+      <h1>Welcome to My Art World</h1>
+      <p>Discover the essence of expression through my creations and visual journeys.</p>
+      <a href="/portfolio.html" class="cta-button">View My Art</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 KaikonMMO. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://x.com/kaikonMMO" target="_blank" class="icon twitter"></a>
+      <a href="https://www.instagram.com/kaikonmmo/" target="_blank" class="icon instagram"></a>
+      <a href="https://bsky.app/profile/kairos-a.bsky.social" target="_blank" class="icon bluesky"></a>
+    </div>
+  </footer>
+
+  <button id="backToTop">↑</button>
+</body>
+</html>

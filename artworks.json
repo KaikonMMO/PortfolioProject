@@ -1,0 +1,194 @@
+{
+  "artworks": [
+    {
+      "id": 1,
+      "title": "Lapis",
+      "image": "art/Lapis.png",
+      "thumb": "art/Lapis.png",
+      "format": "square",
+      "tags": ["cartoon"],
+      "date": "2024-04-10",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 2,
+      "title": "Zeri",
+      "image": "art/Zeri.png",
+      "thumb": "art/Zeri.png",
+      "format": "square",
+      "tags": ["games"],
+      "date": "2024-12-16",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 3,
+      "title": "Tristana",
+      "image": "art/Tristana.png",
+      "thumb": "art/Tristana.png",
+      "format": "square",
+      "tags": ["games"],
+      "date": "2024-12-22",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 4,
+      "title": "Shadow The Hedgehog",
+      "image": "art/ShadowTheHedgehog.png",
+      "thumb": "art/ShadowTheHedgehog.png",
+      "format": "retrat",
+      "tags": ["games"],
+      "date": "2024-12-28",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 5,
+      "title": "Finn&Jake",
+      "image": "art/Finn&Jake.png",
+      "thumb": "art/Finn&Jake.png",
+      "format": "square",
+      "tags": ["cartoon"],
+      "date": "2024-12-30",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 6,
+      "title": "SonicTheHedgehog",
+      "image": "art/SonicTheHedgehog.png",
+      "thumb": "art/SonicTheHedgehog.png",
+      "format": "square",
+      "tags": ["games"],
+      "date": "2024-12-31",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 7,
+      "title": "Profile Picture",
+      "image": "art/Profile Picture.png",
+      "thumb": "art/Profile Picture.png",
+      "format": "square",
+      "tags": ["Original characters"],
+      "date": "2025-02-01",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 8,
+      "title": "Sasuke",
+      "image": "art/Sasuke.png",
+      "thumb": "art/Sasuke.png",
+      "format": "square",
+      "tags": ["anime"],
+      "date": "2025-02-03",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 9,
+      "title": "Robin",
+      "image": "art/Robin.png",
+      "thumb": "art/Robin.png",
+      "format": "square",
+      "tags": ["anime"],
+      "date": "2025-02-04",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 10,
+      "title": "Gojo",
+      "image": "art/Gojo.png",
+      "thumb": "art/Gojo.png",
+      "format": "square",
+      "tags": ["anime"],
+      "date": "2025-02-05",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 11,
+      "title": "Golden Trio",
+      "image": "art/GoldenTrio.png",
+      "thumb": "art/GoldenTrio.png",
+      "format": "square",
+      "tags": ["movies & series"],
+      "date": "2025-02-18",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 12,
+      "title": "Ravena",
+      "image": "art/Ravena.png",
+      "thumb": "art/Ravena.png",
+      "format": "square",
+      "tags": ["cartoon"],
+      "date": "2025-02-21",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 13,
+      "title": "Amy&Rouge",
+      "image": "art/Amy&Rouge.png",
+      "thumb": "art/Amy&Rouge.png",
+      "format": "square",
+      "tags": ["games"],
+      "date": "2025-02-26",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 14,
+      "title": "Kamehameha",
+      "image": "art/Kamehameha.png",
+      "thumb": "art/Kamehameha.png",
+      "format": "square",
+      "tags": ["anime"],
+      "date": "2025-01-31",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 15,
+      "title": "HarryPotter",
+      "image": "art/HarryPotter.png",
+      "thumb": "art/HarryPotter.png",
+      "format": "square",
+      "tags": ["movies & series"],
+      "date": "2025-03-26",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 16,
+      "title": "Gohan",
+      "image": "art/Gohan.png",
+      "thumb": "art/Gohan.png",
+      "format": "square",
+      "tags": ["anime"],
+      "date": "2025-03-06",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 17,
+      "title": "Marceline",
+      "image": "art/Marceline.png",
+      "thumb": "art/Marceline.png",
+      "format": "square",
+      "tags": ["cartoon"],
+      "date": "2025-02-09",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 18,
+      "title": "Steve Harrington",
+      "image": "art/SteveHarrington.png",
+      "thumb": "art/SteveHarrington.png",
+      "format": "retrat",
+      "tags": ["movies & series"],
+      "date": "2025-05-27",
+      "description": "Digital artwork made in Krita"
+    },
+    {
+      "id": 19,
+      "title": "Oc1",
+      "image": "art/Oc1.png",
+      "thumb": "art/Oc1.png",
+      "format": "square",
+      "tags": ["Original characters"],
+      "date": "2025-07-25",
+      "description": "Digital artwork made in Krita"
+    }
+  ]
+}

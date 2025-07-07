@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KaikonMMO | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="masonry.pkgd.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Header (mesmo da landing page) -->
+  <header class="navbar">
+    <div class="logo">
+  <a href="/index.html" 
+     style="color: inherit; text-decoration: none; cursor: pointer;
+            transition: opacity 0.2s ease;"
+     onmouseover="this.style.opacity='0.9'" 
+     onmouseout="this.style.opacity='1'">
+    KaikonMMO
+  </a>
+</div>
+    <nav class="nav-links">
+      
+      <a href="/portfolio.html">Portfolio</a>
+      
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <main class="portfolio-container">
+
+     <!-- Seção Sobre o Artista -->
+  <section class="about-artist">
+  <div class="about-photo">
+    <img src="images/about.png" alt="Artist portrait">
+  </div>
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>
+      Hi, my name is Kairos, and I'm a digital illustrator.
+    </p>
+    <p>
+      I'm 19 years old and I've been drawing for as long as I can remember. Bringing my imagination to life through art is one of my greatest passions.
+    </p>
+    <p>
+      I've never worked professionally in the digital art field, but I don't rule out the idea. This portfolio is a step in that direction — and also a personal keepsake book, filled with drawings (some made with more care than others), but all part of my journey and growth.
+    </p>
+    <ul>
+      <li>Self-taught digital artist</li>
+      <li>Portfolio as both showcase and diary</li>
+      <li>Always learning and evolving</li>
+    </ul>
+    <div class="contact-bar" onclick="navigator.clipboard.writeText('mmokairos@gmail.com')">
+      <i class="fa fa-envelope"></i>
+      <a href="mailto:mmokairos@gmail.com">mmokairos@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+
+    <section class="filters">
+      <select id="tagFilter">
+        <option value="all">All Tags</option>
+        <!-- Tags serão adicionadas dinamicamente -->
+      </select>
+      <select id="dateFilter">
+        <option value="desc">Newest First</option>
+        <option value="asc">Oldest First</option>
+      </select>
+    </section>
+
+    <section id="gallery" class="masonry-grid">
+      <!-- Obras carregadas via JS -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 KaikonMMO. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://x.com/kaikonMMO" target="_blank" class="icon twitter"></a>
+      <a href="https://www.instagram.com/kaikonmmo/" target="_blank" class="icon instagram"></a>
+      <a href="https://bsky.app/profile/kairos-a.bsky.social" target="_blank" class="icon bluesky"></a>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox hidden">
+    <div class="lightbox-content">
+      <span class="close">&times;</span>
+      <img id="lightbox-img" alt="Artwork">
+      <div class="lightbox-info">
+        <h2 id="lightbox-title"></h2>
+        <p id="lightbox-description"></p>
+        <p><strong>Tags:</strong> <span id="lightbox-tags"></span></p>
+        <p><strong>Year:</strong> <span id="lightbox-year"></span></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
