@@ -193,8 +193,8 @@
     {
       "id": 20,
       "title": "Yusuke Urameshi",
-      "image": "art/YusukeUrameshi.webP",
-      "thumb": "art/YusukeUrameshi.webP",
+      "image": "art/YusukeUrameshi.webp",
+      "thumb": "art/YusukeUrameshi.webp",
       "format": "square",
       "tags": ["anime"],
       "date": "2025-07-10",
