@@ -203,8 +203,8 @@
     {
       "id":  21,
       "title": "Ben 10",
-      "image": "art/ben10.webp",
-      "thumb": "art/ben10.webp",
+      "image": "art/Ben10.webp",
+      "thumb": "art/Ben10.webp",
       "format": "square",
       "tags": ["cartoon"],
       "date": "2025-07-16",
