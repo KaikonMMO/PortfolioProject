@@ -199,6 +199,16 @@
       "tags": ["anime"],
       "date": "2025-07-10",
       "description": "Digital artwork made in Krita"
+    },
+    {
+      "id":  21,
+      "title": "Ben 10",
+      "image": "art/ben10.webp",
+      "thumb": "art/ben10.webp",
+      "format": "square",
+      "tags": ["cartoon"],
+      "date": "2025-07-16",
+      "description": "Digital artwork made in Krita"
     }
   ]
 }
