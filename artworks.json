@@ -219,6 +219,16 @@
       "tags": ["Original characters"],
       "date": "2025-07-19",
       "description": "Digital artwork made in Krita"
+    },
+    {
+      "id":  23,
+      "title": "Original Character 3",
+      "image": "art/OC3.webp",
+      "thumb": "art/OC3.webp",
+      "format": "square",
+      "tags": ["Original characters"],
+      "date": "2025-07-19",
+      "description": "Digital artwork made in Krita"
     }
   ]
 }
