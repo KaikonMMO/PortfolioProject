@@ -229,6 +229,16 @@
       "tags": ["Original characters"],
       "date": "2025-07-21",
       "description": "Digital artwork made in Krita"
+    },
+    {
+      "id":  24,
+      "title": "Balthazar",
+      "image": "art/Balthazar.webp",
+      "thumb": "art/Balthazar.webp",
+      "format": "square",
+      "tags": ["Original characters"],
+      "date": "2025-07-29",
+      "description": "Digital artwork made in Krita"
     }
   ]
 }
